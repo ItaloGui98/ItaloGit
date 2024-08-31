@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <div style="min-height: 80vh; margin-top: 50px; padding: 20px;">
+        <div style="border: 5px solid black; border-radius: 10px; min-height: 50vh; display: flex; flex-direction: column; padding: 20px; margin-top: 50px; ">
+            <h1>Clubes:</h1>
+            {% for x in clubes %}
+                <p>{{ x.nome }}</p>
+            {% endfor %}
+        </div>
+
+        <div style="border: 5px solid black; border-radius: 10px; min-height: 50vh; display: flex; flex-direction: column; margin-top: 20px; padding: 20px;">
+            <h1>Jogadores:</h1>
+            {% for y in jogadores %}
+                <p>{{y.nome}} - {{y.nacionalidade}}</p>
+            {% endfor %}
+        </div>
+        
+    </div>
+
+{% endblock %}
